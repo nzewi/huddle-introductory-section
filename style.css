@@ -1,0 +1,196 @@
+/*******************************************
+MODERN CSS RESET
+******************************************/
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    3. Allow percentage-based heights in the application
+  */
+  html, body {
+    height: 100%;
+  }
+  /*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    6. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    7. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    8. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  /*
+    9. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+  /********************************************
+  ***END OF RESET****************************
+  *******************************************/
+
+html {
+  font-size: 62.5%; /* to make 1rem = 10px */
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: white;
+   
+    background-color: hsl(257, 40%, 49%);
+    background-image: url(./images/bg-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  main {
+    padding: 3rem;
+  }
+
+  .hero {
+    max-width: 110rem;
+    display: grid;
+    gap: 2rem;
+    justify-items: center;
+  }
+.hero__logo {
+  width: 15rem;
+  justify-self: start;
+
+}
+.hero__image {
+  margin: 4rem 0;
+
+}
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-items: center;
+}
+.hero__heading {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.8rem;
+  text-align: center;
+
+}
+.hero__paragraph {
+  text-align: center;
+
+}
+.hero__btn {
+  border: none;
+  cursor: pointer;
+  padding: 1rem 7rem;
+  border-radius: 10rem;
+  color: hsl(257, 40%, 49%);
+  align-self: center;
+  box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+
+  margin-bottom: 4rem;
+
+  transition: all .3s;
+}
+
+.hero__btn:hover {
+  background-color: hsl(300, 69%, 71%);
+  color: white;
+}
+
+.socials__icon {
+  cursor: pointer;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  padding: 1rem;
+  margin-right: 1rem;
+}
+
+.socials__icon:hover {
+  color: hsl(300, 69%, 71%);
+}
+
+@media (min-width: 64em) {
+  html {
+    font-size: 75%;
+  }
+  body {
+    background-image: url(./images/bg-desktop.svg);
+  }
+
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+    padding: 0 8rem;
+  }
+
+  .hero {
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    gap:4rem;
+  }
+
+  .hero__logo {
+    grid-column: 1 /-1;
+  }
+
+  .hero__content {
+    justify-content: start;
+  }
+
+  .hero__heading {
+    max-width: 40rem;
+    font-size: 3rem;
+    text-align: left;
+  
+  }
+  .hero__paragraph {
+    text-align: left;
+  
+  }
+
+  .hero__btn {
+    align-self: start;
+  }
+
+  .socials {
+    grid-column: 1/-1;
+    justify-self: end;
+  }
+}
+  
